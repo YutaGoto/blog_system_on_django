@@ -1,0 +1,2 @@
+# blog_system_on_django
+Djangoでブログシステムを作ってみるの会
