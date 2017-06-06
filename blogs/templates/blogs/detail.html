@@ -1,0 +1,15 @@
+<h1>{{ post.title }}</h1>
+
+<div>
+    <h2>Tags</h2>
+    <ul>
+        {% for tag in post.tags.all %}
+            <li>{{ tag.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div>
+    <h2>Body</h2>
+    {{ post.body }}
+</div>
