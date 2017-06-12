@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>blog system</title>
+        <link rel="stylesheet" href="{% static 'blogs/bootstrap-rin-3.3.7-2-dist/rin/css/bootstrap.css' %}">
+        <script src="{% static 'blogs/bootstrap-rin-3.3.7-2-dist/rin/js/bootstrap.js' %}"></script>
+        <style type="text/css">
+            body{ padding-top: 80px; }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header"><a href="/" class="navbar-brand">Blog System</a></div>
+                    <div id="navbar-main" class="navbar-collapse collapse"></div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

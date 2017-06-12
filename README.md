@@ -39,3 +39,6 @@ $ docker-compose run --rm web python manage.py migrate
 $ docker-compose run --rm web python manage.py loaddata dump.json # Seedデータ
 $ docker-compose up
 ```
+## Thanks
+
+このWebシステムのデザインは[Rin](https://rinhoshizo.la/)というBootstrapテーマを使用しています。

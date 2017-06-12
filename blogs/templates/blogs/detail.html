@@ -1,15 +1,21 @@
-<h1>{{ post.title }}</h1>
+{% extends 'blogs/base.html' %}
 
-<div>
-    <h2>Tags</h2>
-    <ul>
-        {% for tag in post.tags.all %}
-            <li>{{ tag.name }}</li>
-        {% endfor %}
-    </ul>
-</div>
+{% block content %}
+    <h1>{{ post.title }}</h1>
 
-<div>
-    <h2>Body</h2>
-    {{ post.body }}
-</div>
+    <div>
+        <h2>Tags</h2>
+        <div>
+            {% for tag in post.tags.all %}
+                <div class="label label-primary">{{ tag.name }}</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div>
+        <h2>Body</h2>
+        <p>
+            {{ post.body }}
+        </p>
+    </div>
+{% endblock %}

@@ -1,13 +1,30 @@
-{% load static %}
+{% extends 'blogs/base.html' %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'blogs/style/application.css' %}" />
+{% block content %}
+    <div class="page-header">
+        <h1>記事一覧</h1>
+    </div>
 
-{% if latest_post_list %}
-    <ul>
-        {% for post in latest_post_list %}
-            <li><a href="{% url 'blogs:detail' post.id %}">{{post.title}}</a></li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>ポストされた記事はありません。</p>
-{% endif %}
+    <div class="bs-component">
+        {% if latest_post_list %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>タイトル</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in latest_post_list %}
+                        <tr>
+                            <td>{{post.id}}</td>
+                            <td><a href="{% url 'blogs:detail' post.id %}">{{post.title}}</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>ポストされた記事はありません。</p>
+        {% endif %}
+    </div>
+{% endblock %}
