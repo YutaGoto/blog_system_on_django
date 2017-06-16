@@ -34,9 +34,9 @@ $ cd blog_system_on_django
 プロジェクトのセットアップと起動をする
 
 ```bash
-$ docker-compose build
 $ docker-compose run --rm web python manage.py migrate
 $ docker-compose run --rm web python manage.py loaddata dump.json # Seedデータ
+$ docker-compose run --rm web python manage.py bower_install --allow-root
 $ docker-compose up
 ```
 ## Thanks
