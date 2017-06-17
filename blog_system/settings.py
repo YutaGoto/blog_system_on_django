@@ -96,7 +96,7 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 STATIC_URL = '/static/'
 
-BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components')
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components/')
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -141,5 +141,5 @@ USE_TZ = True
 
 BOWER_INSTALLED_APPS = (
     'jquery',
-    'Rin',
+    'Rin=git://github.com/raryosu/Rin#v3.3.7-2',
 )
